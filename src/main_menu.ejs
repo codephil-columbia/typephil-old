@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <% include ./partials/navbar %>
+    <div class = "main-container withnav">
+      <div class = "signif">
+        <div id = "menu-title">Main Menu</div>
+        <table class = "menu-box">
+          <tr>
+            <td>
+              <div>
+                <button class = "btn btn-warning menu-item" onclick="route_tutorial_config()"><span class = "fa fa-road"></span></button>
+              </div>
+              <div class = "menu-desc"><span class = "desc">Tutorial</span></div>
+            </td>
+            <td>
+              <div>
+                <button class = "btn btn-warning menu-item" onclick="route_game()"><span class = "fa fa-gamepad"></span></button>
+              </div>
+              <div class = "menu-desc"><span class = "desc">Typing Games</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <button class = "btn btn-warning menu-item" onclick="route_summary()"><span class = "fa fa-tachometer"></span></button>
+              </div>
+              <div class = "menu-desc"><span class = "desc">Summary</span></div>
+            </td>
+            <td>
+              <div>
+                <button class = "btn btn-warning menu-item" onclick="route_notepad()"><span class = "fa fa-pencil-square-o"></span></button>
+              </div>
+              <div class = "menu-desc"><span class = "desc">Notepad</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <% include ./partials/footer %>
+    </div>
+  </body>
+</html>

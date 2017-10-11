@@ -1,0 +1,17 @@
+<script>
+var user = dbClient.getCurrentUser();
+var setLanguage = function(lang) {
+  user.language = lang;
+  dbClient.saveUser(user);
+}
+</script>
+<div class = "footer">
+  <div id = "language-box">Language: 
+    <select onchange="setLanguage(this.options[this.selectedIndex].text)" id = "language-selector-footer">
+      <option selected disabled hidden><%= user.language %></option>
+      <option value="english">English</option>
+      <option value="tagalog">Tagalog</option>
+    </select>
+  </div>
+  <button id = "log-out" class = "btn btn-danger" onclick="route_start_screen()"><span class = "fa fa-sign-out"></span><span class = "desc"> Log Out </span></button>
+</div>

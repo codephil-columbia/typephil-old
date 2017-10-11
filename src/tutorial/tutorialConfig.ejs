@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ../partials/head %>
+    <script src="./tutorial/tutorialConfig.js"></script>
+  </head>
+  <body>
+    <% include ../partials/navbar.ejs %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_main_menu()"><span class="fa fa-arrow-left"></span></button>
+      <div class="signif">
+        <div class="config-title">Tutorial Mode</div>
+        <div class="config-description">
+          <div class="tutorialConfig-description">Here, we will teach you basic typing form and techniques. As you progress through these tutorials, make sure to focus on accuracy over speed, as you need at least an 80% accuracy to progress to the next tutorial. The more lessons you complete, the more lessons will be available!</div>
+          <br>
+          <div class="tutorialConfig-description">Hint: go full screen for the most complete learning experience!</div>
+        </div>
+        <div id="tutorial-difficulty-description">Select a tutorial:</div>
+        <% config.modes.forEach(function(mode) { %>
+          <div class="btn-group mode-lessons">
+            <button type="button" id="configButton" class="btn btn-info btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= mode %> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <% config[mode].buttonDropDownLessons.forEach(function(lesson) { %>
+                <li class="lessonTitle" data-diff="<%= mode %>"><a href="#" onclick="route_tutorial_debrief('<%=lesson%>','<%=mode%>')"><%=lesson%></a></li>
+              <% }) %>
+            </ul>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+    <% include ../partials/footer.ejs %>
+  </body>
+</html>

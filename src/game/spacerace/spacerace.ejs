@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ../../partials/head %>
+    <script src = "./game/spacerace/spacerace.js"></script>
+    <script>
+      $( document ).ready(function() {
+        var pressed = {};
+        $( "#spacerace-input" ).focus();
+        $('#missedword-input').keydown(function(e) {
+          pressed[e.keyCode] = e.type == 'keydown';
+          if(e.keyCode === 16) {
+            if(keyboardSwappedToSpecialValues !== true)
+              swapKeyboardToSpecialValues();
+          }
+        });
+        $('#missedword-input').keyup(function(e) {
+          pressed[e.keyCode] = e.type == 'keydown';
+          if(e.keyCode === 16 && keyboardSwappedToSpecialValues !== false) {
+              swapKeyboardToOldValues();
+          }
+          checkMissedWord($('#missedword-input').val(), document.getElementById('missedword-display').value)
+          unHighlightPrevAndForwardKey();
+          highlightCurrentKey();
+          highlightFinger();
+        });
+        $('#missedword-input').on('keypress', function(e) {
+          unHighlightCurrentKey();
+          swapKeyboardToOldValues();
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <% include ../../partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" id="spacerace-exit"><span class="fa fa-arrow-left"></span></button>
+      <div class="signif">
+        <div id = "spacerace-instructions"><b>Instructions: </b> Type the words on the asteroids before they hit Earth!</div>
+        <div id = "spacebox">
+          <img id = "earth" src="public/images/earth.png"></img>
+        </div>
+        <div id = "missedWordModal" class = "modal">
+          <div class = "modal-text">
+            <span>An asteroid breached your defenses! Type the phrase to continue.</span>
+            <div>
+              <textarea disabled class="form-control" id = "missedword-display"></textarea>
+              <div>
+                <span class="form-control" id = "missedword-match"><span id = "correct"></span><span id = "incorrect"></span></span>
+                <textarea autofocus class="form-control" id = "missedword-input"></textarea>
+              </div>
+            </div>
+          </div>
+          
+          <% include ../../partials/keyboard %>
+        </div>
+        <div>
+          <input tabindex="-1" type="text" class="form-control" id = "spacerace-input" onkeyup="matchWords(infiniteList, this.value); //console.log(score);" autofocus>
+        </div>
+        <div id = "spacerace-info">
+          <span id = "leftside-info">Lives Left: <span id = "lives"></span></span> <span id = "rightside-info">Level: <span id = "level"></span> Score: <span id = "score"></span></span>
+        </div>
+      </div>
+      <% include ../../partials/footer %>
+    </div>
+  </body>
+  <script>
+    var infiniteList = [];
+    var lives = 2;
+    var count = 0;
+    var level = 1;
+    var score = 0;
+    populateLives();
+    populateLevel();
+    populateScore();
+    setDifficultyModifier();
+    var spaceraceGo = setInterval(function () { try { infiniteList = wordUp(infiniteList);} catch(err) { clearInterval(spaceraceGo);} }, parseInt(6000/(difficulty_modifier*Math.sqrt(level))));
+    $( "#spacerace-exit" ).click(function() {
+      pauseSpacerace();
+      var infiniteList = [];
+      route_config_spacerace();
+    });
+  </script>
+</html>

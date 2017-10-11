@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ../../partials/head %>
+    <script src="./game/challenge/challenge.js"></script>
+  </head>
+  <body>
+    <% include ../../partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_config_challenge()"><span class="fa fa-arrow-left"></span></button>
+      <div class="signif">
+        <div id ="challenge-instructions"><b>Instructions:</b> Type the phrase below before the time runs out!</div>
+        <div id="sentence-holder"></div>
+        <div id="challenge-input">
+          <input autofocus type="text" class="form-control" id="sentence-input" onkeyup="check()">
+        </div>
+        <div id="challenge-info">
+          <span id="leftside-info">Streak: <span id="counter">0</span></span> <span id="rightside-info">Countdown: <span id="countdown-clock"></span> seconds</span>
+        </div>
+      </div>
+      <% include ../../partials/footer %>
+    </div>
+  </body>
+  <script>
+    start();
+  </script>
+</html>

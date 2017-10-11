@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <% include ../partials/head.ejs %>
+    <script src="./tutorial/tutorial.js"></script>
+  </head>
+  <body>
+    <% include ../partials/navbar.ejs %>
+    <div class="main-container withnav">
+      <button class="back" onclick="route_tutorial_config()"><span class="fa fa-arrow-left"></span></button>
+      <div>
+        <div id="tutorial-name"><%= title %></div>
+        <!-- Debrief Modal that explains what this tutorial will be about -->
+        <!-- @title: title of lesson from config @debriefMessage: metadata message from config -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-title" id="myModalLabel"><%= title %></div>
+                <div id="difficulty"><%= diff %></div>
+              </div>
+              <div class="modal-body">
+                <%= debriefMessage %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- comes out when the tutorial ends -->
+        <div class="modal fade" id="myModalDebrief" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" font-family: 'Raleway';">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-title display-3" id="myModalLabel"><%= title %></div>
+                <div id="difficulty">Completed</div>
+              </div>
+              <div class="modal-body" st>
+                <div class="container">
+                  <div class="row" style="padding-bottom: 10px;">
+                    <div class="col-md-2">
+                      <div>Number of correct characters</div>
+                      <span class="fa fa-check" style="color: green;"></span>
+                      <span class="number-correct"></span>
+                    </div>
+                    <div class="col-md-2">
+                      <div>Number of incorrect characters</div>
+                      <span class="fa fa-times" style="color: red;"></span>
+                      <span class="number-incorrect"></span>
+                    </div>
+                    <div class="col-md-2">
+                      <div>Percentage Correct</div>
+                      <div class="percentage-correct"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="debrief-body"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default debrief-button" data-dismiss="modal">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Actual Page Content -->
+        <div id = "lesson-content">
+          <div class="screen"></div>
+        </div>
+      </div>
+      <% include ../partials/keyboard.ejs %>
+    </div>
+  </body>
+</html>

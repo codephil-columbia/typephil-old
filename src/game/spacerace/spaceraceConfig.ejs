@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ../../partials/head %>
+    <script src = "./game/spacerace/spaceraceConfig.js"></script>
+  </head>
+  <body>
+    <% include ../../partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_game()"><span class="fa fa-arrow-left"></span></button>
+      <div class="signif">
+        <div class="config-title">Spacerace</div>
+        <div class="config-description">The planet is under attack! Aliens are hurling a barrage of word asteroids at the Earth, and you are the only one who can stop them. Type the words on the asteroids as they appear to eliminate them before they make impact. If you let an asteroid past your guard, you will lose a life. If you lose all your lives, then it's game over, but don't worry: you can recover lives by progressing to the next level. However, as you progress through the levels, the asteroids will only increase in number. How long can you protect the planet?</div>
+        <div class = "game-settings">Settings</div>
+        <span>
+          <span>Difficulty</span>
+          <select class="difficulty-selector" id="difficulty-selector">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </span>
+        <span style="display:none;">
+          <span>Language</span>
+          <select class="language-selector" id="language-selector">
+            <option value="english">English</option>
+            <option value="tagalog">Tagalog</option>
+          </select>
+        </span>
+        <div>
+          <button class="btn btn-success config-menu" onclick="set_game_difficulty(); set_game_language(); route_spacerace();">Play</button>
+        </div>
+      </div>
+      <% include ../../partials/footer %>
+    </div>
+  </body>
+</html>

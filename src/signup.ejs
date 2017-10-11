@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <div class = "main-container">
+      <div class = "maintext">
+        <div id = "title">TypePhil.<span class="blinking-cursor">|</span></div>
+        <form id="signup">
+          <input autofocus class = "personalData" placeholder="Username" type="text" name="username">
+          <input class = "personalData" placeholder="Password" type="password" name="password">
+          <button class = "btn btn-warning" onclick="route_signup()"><span class="fa fa-user-plus"></span> <span class = "desc">Sign Up</span></button>
+        </form>
+        <div>Already have an account? <button class = "btn btn-warning" onclick="route_start_screen()"><span class="fa fa-refresh"></span> <span class = "desc">Login</span></button><div>
+      </div>
+    </div>
+  </body>
+</html>

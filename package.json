@@ -1,0 +1,35 @@
+{
+  "name": "TypePhil",
+  "version": "1.0.0",
+  "description": "Educational typing app made for CodePhil",
+  "main": "index.js",
+  "author": "CodePhil Dev Team",
+  "build": {
+    "appId": "com.codephil.typephil",
+    "productName": "TypePhil",
+    "win": {
+      "icon": "build/TypePhilAppLogo.ico"
+    },
+    "mac": {
+      "icon": "build/TypePhilAppLogo.icns"
+    }
+  },
+  "scripts": {
+    "start": "electron index.js",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "grunt-cli": "^1.2.0",
+    "jquery": "^3.2.1",
+    "log": "^1.4.0",
+    "password-hash": "^1.2.2",
+    "path": "^0.12.7",
+    "sentencer": "^0.1.5",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15"
+  }
+}

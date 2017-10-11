@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ../../partials/head %>
+    <script src = "./game/challenge/challengeConfig.js"></script>
+  </head>
+  <body>
+    <% include ../../partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_game()"><span class="fa fa-arrow-left"></span></button>
+      <div class="signif">
+        <div class="config-title">Challenge</div>
+        <div class="config-description">Are you up to the Challenge? Type as many phrases as you can before time runs out. Every time that you correctly type a phrase, you will get a small time bonus. Test your typing skills and try to beat your personal streak!</div>
+        <div class="game-settings">Settings</div>
+        <span>
+          <span>Difficulty</span>
+          <select class="difficulty-selector" id="difficulty-selector">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </span>
+        <span style="display:none;">
+          <span>Language</span>
+          <select class="language-selector" id="language-selector">
+            <option value="english">English</option>
+            <option value="tagalog">Tagalog</option>
+          </select>
+        </span>
+        <div>
+          <button class="btn btn-success config-menu" onclick="get_game_difficulty(); get_game_language(); route_challenge();">Play</button>
+        </div>
+      </div>
+      <% include ../../partials/footer %>
+    </div>
+  </body>
+</html>

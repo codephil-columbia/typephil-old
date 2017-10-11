@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ../../partials/head %>
+    <script src = "./game/typeracer/typeracerConfig.js"></script>
+  </head>
+  <body>
+    <% include ../../partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_game()"><span class="fa fa-arrow-left"></span></button>
+      <div class="signif">
+        <div class="config-title">Typeracer</div>
+        <div class="config-description">It's time to test your skills on the racetrack! Type the passages as quickly and accurately as you can to increase your words per minute (WPM) rate. As your WPM rises, so does the speed of your racecar. Try to beat both your opponents and your own best WPM as you race towards the finish line!</div>
+        <div class = "game-settings">Settings</div>
+        <span>
+          <span>Difficulty</span>
+          <select class="difficulty-selector" id="difficulty-selector">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </span>
+        <span style="display:none;">
+          <span>Language</span>
+          <select class="language-selector" id="language-selector">
+            <option value="english">English</option>
+            <option value="tagalog">Tagalog</option>
+          </select>
+        </span>
+        <span>
+          <span>Car</span>
+          <select class="car-selector" id="car-selector">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="golden">Golden</option>
+          </select>
+        </span>
+        <div>
+          <button class="btn btn-success config-menu" onclick="set_game_difficulty(); set_game_language(); set_car_color(); route_typeracer();">Play</button>
+        </div>
+      </div>
+      <% include ../../partials/footer %>
+    </div>
+  </body>
+</html>

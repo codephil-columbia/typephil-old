@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ./partials/head %>
+    <script>
+      function fixedEncodeURIComponent (str) {
+        return encodeURIComponent(str).replace(/[!'()*]/g, escape);
+      }
+      var user = dbClient.getCurrentUser();
+      var setNotepadContent = function(content) {
+        console.log(content);
+        user.notepad = fixedEncodeURIComponent(content);
+        dbClient.saveUser(user);
+      }
+      $( document ).ready(function() {
+        document.getElementById('notepad-editor').value =  decodeURIComponent("<%= user.notepad %>");
+      });
+    </script>
+  </head>
+  <body>
+    <% include ./partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_main_menu()"><span class="fa fa-arrow-left"></span></button>
+      <div class = "signif">
+        <div id = "notepad-title">Notepad</div>
+        <div>Write what you want here (notes, musings, etc.), and we'll save it for you!</div>
+        <textarea class ="form-control" id="notepad-editor"></textarea>
+        Click the button below the save any changes to your notepad.
+        <div id="save-container">
+          <button class = "btn btn-info" id = "save" onclick="setNotepadContent(document.getElementById('notepad-editor').value);alert('Your changes have been saved!')"><span class="fa fa-floppy-o"></span> Save</button>
+        </div>
+      </div>
+      <% include ./partials/footer %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1060 @@
+/*********** Main Container and Navbar Accomodation *************/
+.main-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#131b75, endColorstr=#ED4337);
+  background: -moz-linear-gradient(top, #131b75 0%, #8bcbe8 64%,#8bcbe8 100%);
+  background: linear-gradient(top, #131b75 0%, #8bcbe8 64%,#8bcbe8 100%);
+  background: -webkit-linear-gradient(top, #131b75 0%, #8bcbe8 64%,#8bcbe8 100%);
+  background: -o-linear-gradient(top, #131b75 0%, #8bcbe8 64%,#8bcbe8 100%);
+  background: -ms-linear-gradient(top, #131b75 0%, #8bcbe8 64%,#8bcbe8 100%);
+  background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#131b75), color-stop(64%,#8bcbe8),color-stop(100%,#8bcbe8));
+}
+
+.withnav {
+  top: 80px;
+  height: calc(100% - 80px);
+}
+
+/*********** General *************/
+
+body {
+  background-color:transparent;
+}
+@media only screen and (max-width: 500px){
+  .desc {
+    display: none;
+  }
+}
+
+.disabled {
+  pointer-events:none; 
+  opacity:0.6;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  /*z-index: 10; !* Sit on top *!*/
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-text {
+  color: white;
+  background-color: #87ceeb;
+  border-radius: 2px;
+  margin: 15vmin auto 10vmin auto; /* 15% from the top and centered */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: auto;
+}
+
+button {
+  font-family: 'Raleway';
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+.btn {
+  font-size: inherit;
+}
+
+.fa fa-arrow-left {
+  font-size: 25px;
+}
+.back {
+  margin: 5px 5px 5px 5px;
+  border: 1px solid white;
+  border-radius: 15px;
+  height: 30px;
+  width: 30px;
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  font-family: 'Raleway';
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+/*********** App ***********/
+#title {
+  text-align: center;
+  font-family:'Raleway';
+  color:white;
+  font-size: 8em;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+#login {
+  height: 20vh;
+}
+
+.maintext {
+  text-align: center;
+  font-family:'Raleway';
+  color: white;
+
+}
+
+.signif {
+  text-align: center;
+  font-family:'Raleway';
+  color: white;
+  font-size:1em;
+}
+
+.app-option {
+  margin: 10px 10px 10px 10px;
+}
+
+/********** Signup **********/
+#signup {
+  height: 20vh;
+}
+/********** main_menu **********/
+.fa {
+  font-size: 25px;
+}
+
+table.menu-box {
+  margin: auto;
+  width: 50vw;
+  height: 50vh;
+  font-size: 1em;
+  border-spacing: 10px 10px 10px 10px;
+  border-collapse: separate;
+}
+
+#menu-title {
+  padding: 20px 20px 20px 20px;
+  font-size: 2em;
+}
+
+.menu-item {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
+.menu-desc {
+  height:30px;
+  margin: 10px 10px 10px 10px;
+}
+
+/********** Password Recovery **********/
+.table-wrapper {
+  margin: 20px 20px 20px 20px;
+  overflow: auto;
+  height: 50vh;
+}
+#adminLogin {
+  height: 20vh;
+}
+#password-table {
+  background-color: transparent;
+  color: white;
+}
+.password{
+}
+.username{
+}
+#password-recovery-instructions{
+  text-align: center;
+  font-family:'Raleway';
+  color: white;
+  font-size:1em;
+  padding: 40px 40px 0px 40px;  
+}
+#tableSearch {
+  font-family: 'Raleway';
+  
+}
+.table-hover tbody tr:hover td.password {
+  background-color: #131b75;
+}
+.table.table-hover{
+  margin:0;
+}
+
+.table-hover tbody tr:hover td.username, .table-hover tbody tr:hover th {
+  background-color: #ffc266;
+}
+
+/********** Summary **********/
+#scores-title {
+  font-size: 2em;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  color: white;
+  font-family:'Raleway';
+}
+
+.game-name {
+  margin: 20px 20px 20px 20px;
+  font-size: 2em;
+  color: #ffc266;
+  border-bottom: 4px solid white;
+  
+}
+.game-score {
+  padding: 20px 20px 20px 20px;
+}
+.mode-score {
+  color: #ffc266;
+}
+#summary-box {
+  height: 60vh;
+  overflow: auto;
+  color: white;
+  font-family:'Raleway';
+}
+
+#summary-redirect-button {
+  
+}
+
+/********** Config Pages **********/
+.difficulty-selector {
+  font-family: 'Raleway';
+  color: #ffc266;
+  background-color: transparent;
+  border-color: transparent;
+  display: inline-block;
+  width: 100px;
+}
+.language-selector{
+  font-family: 'Raleway';
+  color: #ffc266;
+  background-color: transparent;
+  border-color: transparent;
+  display: inline-block;
+  width: 100px;
+}
+.car-selector {
+  font-family: 'Raleway';
+  color: #ffc266;
+  background-color: transparent;
+  border-color: transparent;
+  display: inline-block;
+  width: 100px;
+}
+.config-title {
+  padding: 20px 20px 20px 20px;
+  font-size: 2em;
+}
+
+.config-description {
+  text-align: left;
+  width: 60vw;
+  margin: auto;
+}
+.game-settings {
+  font-size: 1.5em;
+  padding: 10px 10px 10px 10px;
+}
+.config-menu {
+  margin: 10px 10px 10px 10px;
+}
+
+
+/********** Notepad **********/
+#notepad-title{
+  padding: 20px 20px 20px 20px;
+  font-size: 2em;s
+}
+#notepad-editor {
+  color: black;
+  font-size: 16px;
+  font-family: 'Times New Roman';
+  width: 80vw;
+  height: 40vh;
+  margin: 5vh auto;
+  top: 10%;
+  border-radius: 0;
+  border: transparent;
+  box-shadow: 0 0 0 2px;
+}
+#save {
+  margin: auto;
+}
+#save-container {
+  padding: 20px 20px 20px 20px;
+}
+
+/********** Game Menu **********/
+#game-title {
+  padding: 20px 20px 20px 20px;
+  font-size: 2em;
+}
+
+
+/********** Challenge ***********/
+#challenge-instructions{
+  padding: 20px 20px 20px 20px;
+}
+#challenge-input {
+}
+
+#sentence-holder {
+  margin: 20px 20px 20px 20px;
+  width: auto;
+  font-size: 2em;
+  border-bottom: 1px solid white;
+}
+
+#sentence-input {
+}
+
+#countdown-clock {
+  font-size: 2em;
+}
+#challenge-info {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+#counter {
+  color: #ffc266;
+}
+
+/********** SpaceRace **********/
+#spacerace-instructions{
+  padding: 20px 20px 20px 20px;
+}
+#spacebox {
+  position: relative;
+  background-image: url('../images/space.jpg');
+  background-size: 100% auto;
+  margin: auto;
+  height: 40vmin;
+  width: 100%;
+  /*border-style: solid;*/
+  /*border-width: 5px;*/
+  /*border-color: red;*/
+}
+
+#earth {
+  position: relative;
+  height: 100%;
+  float:right;
+}
+
+.word {
+  position: absolute;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: black;
+  border-left-color: black;
+  border-right-color: white;
+  border-bottom-color: white;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  color: white;
+  background-color: orange;
+  font-family: 'Raleway';
+}
+
+#missedword-display {
+  text-align: left;
+  display: inline-block;
+  color: black;
+  overflow: hidden;
+  width: 30vw;
+  height: 2em;
+  resize: none;
+  box-shadow: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+#missedword-match {
+  text-align: left;
+  display: inline-block;
+  overflow: hidden;
+  pointer-events: none;
+  width: 30vw;
+  height: 2em;
+  position: absolute;
+  z-index: 2;
+  resize: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+#missedword-input {
+  text-align: left;
+  display: inline-block;
+  color: transparent;
+  overflow: hidden;
+  width: 30vw;
+  height: 2em;
+  resize: none;
+  background-color: white;
+}
+
+.form-control#spacerace-input {
+  border-radius: 0px;
+  border:0px;
+}
+
+#spacerace-info {
+  height: 20px;
+  margin: auto;
+}
+
+#leftside-info {
+  margin: 5px 5px 5px 5px;
+  position: absolute;
+  left: 0px;
+}
+#rightside-info {
+  margin: 5px 5px 5px 5px;
+  position: absolute;
+  right: 0px;
+}
+#lives {
+  color: #ffc266;
+}
+#level {
+  color: #ffc266;
+}
+#score {
+  color: #ffc266;
+}
+
+.fa.fa-heart.withmargin {
+  font-size: 1em;
+  margin: 0 2px 0 2px;
+}
+
+/********** TypeRacer **********/
+#typeracer-instructions{
+  padding: 20px 20px 20px 20px;
+}
+#typeracerbox {
+  background-image: url('../images/forest.jpg');
+  background-size: 100% auto;
+  margin: auto;
+  height: 200px;
+  width: 100%;
+  /*border-style: solid; */
+  /*border-width: 5px; */
+  /*border-color: blue; */
+}
+.racecarbox {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.racecar {
+  position: absolute;
+  width: 100px;
+  left: 0px;
+  bottom: 0px;
+}
+.road {
+  width: 100%;
+  background-image: url('../images/road.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 15px;
+  background-position: left bottom;
+}
+.wpmdisplay {
+  text-align: center;
+  height: 10px;
+  color: white;
+  font-family: 'Raleway';
+}
+.racername {
+  text-align: center;
+  height: 10px;
+  color: white;
+  font-family: 'Raleway';
+}
+
+#typeracer-display {
+  color: white;
+  z-index: 0;
+  font-size: 1em;
+  position: absolute;
+  resize: none;
+  height: 20vmin;
+  overflow: auto;
+  border-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
+#typeracer-match {
+  z-index: 2;
+  font-size: 1em;
+  text-align: left;
+  position: absolute;
+  resize: none;
+  height: 20vmin;
+  overflow: auto;
+  border-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
+#typeracer-input {
+  color: transparent;
+  font-size: 1em;
+  position: absolute;
+  z-index: 2;
+  resize: none;
+  height: 20vmin;
+  overflow: auto;
+  border-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
+#correct {
+  color: green;
+}
+
+#incorrect {
+  background-color: #FFCCCC;
+  color: red;
+}
+
+.wins {
+  color: green;
+}
+
+.losses {
+  color: red;
+}
+#typeracer-info {
+  height: 20px;
+  margin: auto;
+}
+
+/*********** Navbar *************/
+.navbar {
+  padding: 0;
+  font-family: 'Raleway';
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  border-radius: 0px;
+}
+
+#logo {
+  margin: 5px 5px 5px 5px;
+  z-index: 5;
+  display: inline-block;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+}
+
+#logo-background {
+  margin: 5px 5px 5px 5px;
+  z-index: 0;
+  display: inline-block;
+  position: absolute;
+  border-radius: 35px;
+  background-color: #8bcbe8;
+  height: 70px;
+  width: 70px;
+}
+
+.nav-text {
+  display: inline-block;
+  top: 0px;
+  line-height: 80px;
+  position: absolute;
+  right: 40px;
+  font-size: 1.1em;
+}
+.nav-title {
+  display: inline-block;
+  top: 0px;
+  line-height: 80px;
+  left: 100px;
+  position: absolute;
+  color: #131b75;
+  font-size: 3.3em;
+}
+
+@media only screen and (max-width: 600px) {
+  #logo {
+    display: none;
+  }
+  #logo-background {
+    display: none;
+  }
+  .nav-text {
+    display: none;
+  }
+  .nav-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/*********** Footer *************/
+
+.footer {
+  font-family: 'Raleway';
+  pointer-events: none;
+  z-index: 10000;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+#log-out {
+  pointer-events: auto;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 50px;
+}
+
+#language-box {
+  display: none; /*hidden until language selection actually works*/
+  color: #131b75;
+  pointer-events: auto;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 300px;
+}
+
+#language-selector-footer {
+  font-family: 'Raleway';
+  color: #ffc266;
+  background-color: transparent;
+  border-color: transparent;
+  display: inline-block;
+  width: 100px;
+}
+
+select option {
+  background-color: transparent;
+}
+
+/*********** Login/Signup Forms *************/
+
+input.personalData {
+  text-align: left;
+  font-family: 'Raleway';
+  font-style: italic;
+  width: 30vw;
+  font-size: 1.5em;
+  color: white;
+  background-color: transparent;
+  margin: 8px 8px 8px 8px;
+  border: none;
+  border-bottom: 4px solid white;
+}
+
+input.personalData:-ms-input-placeholder {
+  text-align: left;
+  font-family: 'Raleway';
+  font-style: italic;
+  font-size:1em;
+  color: #ffc266;
+  background-color: transparent;
+}
+
+input.personalData::-webkit-input-placeholder {
+  text-align: left;
+  font-family: 'Raleway';
+  font-style: italic;
+  font-size:1em;
+  color: #ffc266;
+  border: none;
+  background-color: transparent;
+}
+
+input.personalData:-moz-placeholder {
+  text-align: left;
+  font-family: 'Raleway';
+  font-style: italic;
+  font-size:1em;
+  color: #ffc266;
+  border: none;
+  background-color: transparent;
+}
+
+/*********** Blinking Cursor *************/
+
+.blinking-cursor {
+  font-weight: 100;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+@-ms-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+@-o-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+/*********** Tutorial Mode Config ***********/
+#configButton {
+  margin: 2vmin 2vmin 2vmin 2vmin;
+  max-width: 25vmin;
+  font-size: 2.5vmin;
+}
+#myModalDebrief {
+  font-family: 'Raleway';
+  margin: 15% auto;
+}
+#myModal {
+  font-family: 'Raleway';
+  margin: 15% auto;
+}
+#tutorial-name{
+  font-family: 'Raleway';
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  padding: 20px 20px 20px 20px;
+  margin: auto;
+}
+#tutorial-difficulty-description {
+  font-size: 1.5em;
+  margin: 10px 10px 10px 10px;
+}
+.dropdown-menu {
+  max-height: 25vmin;
+  overflow: auto;
+}
+
+/********** Tutorial Mode **********/
+.screen {
+  align-items: center;
+  width: 100vmin;
+  padding: 2vmin 2vmin 2vmin 2vmin;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: auto;
+}
+.line {
+  display: inline-block;
+  text-align: center;
+  width: 95vmin;
+  height: 5vmin;
+  padding-top: 1vmin;
+  border-top: 1px solid #f4f4f4;
+  position: relative;
+}
+
+.line:first-child {
+  border-top: 0;
+}
+#lesson-content {
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  margin: auto;
+  margin-bottom: 40px;
+  height: 12vmin;
+  overflow: hidden;
+}
+.letter.typed {
+  color: darkgray;
+}
+.letter.typed.error {
+  background: #c33a40;
+  color: #fff;
+}
+.letter.active {
+  background: #3295db;
+  color: #fff;
+}
+.letter {
+  display: block;
+  height: 3.4vmin;
+  width: auto;
+  margin-right: 0.2vmin;
+  float: left;
+  color: #1a1a1a;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 3vmin;
+  padding-top: 0;
+}
+
+/********** Keyboard **********/
+#keyboardContainer {
+  display:block;
+  font-family: Verdana, Sans-Serif;
+  font-size: 2vmin;
+  color: black;
+}
+
+.container.lesson-content {
+}
+
+#outer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#write {
+  margin: 0 0 5px;
+  padding: 5px;
+  width: 671px;
+  height: 200px;
+  font: 1em/1.5 Verdana, Sans-Serif;
+  background: #fff;
+  border: 1px solid #f9f9f9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#keyboard {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#keyboard li {
+    float: left;
+    margin: 0 0.75vmin 0.75vmin 0;
+    width: 6vmin;
+    height: 6vmin;
+    line-height: 6vmin;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    -moz-border-radius: 0.75vmin;
+    -webkit-border-radius: 0.75vmin;
+}
+.capslock, .tab, .left-shift {
+    clear: left;
+}
+#keyboard .tab, #keyboard .delete {
+    width: 9vmin;
+}
+#keyboard .capslock {
+    width: 10vmin;
+}
+#keyboard .return {
+    width: 11.75vmin;
+}
+#keyboard .left-shift {
+    width: 14.25vmin;
+}
+#keyboard .right-shift {
+    width: 14.25vmin;
+}
+.lastitem {
+    margin-right: 0;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+#keyboard .space {
+    clear: left;
+    width: 96.75vmin;
+}
+.on {
+    display: none;
+}
+#keyboard li:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #e5e5e5;
+    cursor: pointer;
+}
+
+#keyboard li.active {
+    background-color: #50abe3;
+    border-bottom-color: #4998c9;
+    border-top-color: #349fec;
+    border-right-color: #4998c9;
+    border-left-color: #349fec;
+    color: white;
+}
+
+
+/********** Hands **********/
+.hand {
+    width: 25vmin;
+    height: 33vmin;
+    margin: 0 0 0.75vmin 0;
+    position: relative;
+    background-color: transparent;
+}
+.hand:after {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 2.5vmin;
+    background-size: 100% 100%;
+    background-color: rgba(153,255,102,.5); // Tint color
+    background-blend-mode: multiply;
+}
+.hand.circle {
+    display: none;
+}
+.hand.hand-left {
+    margin-right: 0.75vmin;
+    background: url("../images/hand_left.svg") no-repeat 0 0;
+    background-size: 25vmin 33vmin;
+}
+.finger-1 .hand.hand-left:after {
+    display: block;
+    left: 2.2vmin;
+    top: 3.75vmin;
+}
+.finger-2 .hand.hand-left:after {
+    display: block;
+    left: 7vmin;
+    top: .35vmin;
+}
+.finger-3 .hand.hand-left:after {
+    display: block;
+    left: 10.9vmin;
+    top: -1.5px; }
+.finger-4 .hand.hand-left:after {
+    display: block;
+    left: 14.8vmin;
+    top: 1vmin;
+}
+.finger-5 .hand.hand-left:after {
+    display: block;
+    left: 20.4vmin;
+    top: 12.3vmin;
+}
+.hand.hand-right {
+    margin-left: 0vmin;
+    background: url("../images/hand_right.svg") no-repeat 0 0;
+    background-size: 25vmin 33vmin;
+}
+.finger-6 .hand.hand-right:after {
+    display: block;
+    right: 20.4vmin;
+    top: 12.3vmin;
+}
+.finger-7 .hand.hand-right:after {
+    display: block;
+    right: 14.8vmin;
+    top: 1vmin;
+}
+.finger-8 .hand.hand-right:after {
+    display: block;
+    right: 10.9vmin;
+    top: -1.5vmin;
+}
+.finger-9 .hand.hand-right:after {
+    display: block;
+    right: 7vmin;
+    top: .35vmin;
+}
+.finger-10 .hand.hand-right:after {
+    display: block;
+    right: 2.2vmin;
+    top: 3.75vmin;
+}
+
+@media only screen and (max-width: 150vmin) {
+  .hand {
+    display: none;
+  }
+  #container {
+    float: none;
+  }
+  #outer {
+    margin: auto;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ../../partials/head %>
+    <script src = "./game/typeracer/typeracer.js"></script>
+    <script>
+      // Initialize start time and other variables  (used later for wpm calculations)
+      var totalentries = 0;
+      var totalinc = 0;
+      var previnc = 0;
+      var start = new Date();
+
+      $( document ).ready(function() {
+        $( "#typeracer-input" ).focus();
+        $(document).keypress(function(event){
+          var cand = String.fromCharCode(event.which);
+        });
+        $(document).keyup(function () {
+          $( "#typeracer-input" ).focus();
+          $('#typeracer-display').scrollTop($('#typeracer-input').scrollTop());
+          $('#typeracer-match').scrollTop($('#typeracer-input').scrollTop());
+        });
+      });
+    </script>
+    </script>
+  </head>
+  <body>
+    <% include ../../partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_config_typeracer()"><span class="fa fa-arrow-left"></span></button>
+      <div class = "signif">
+        <div id = "typeracer-instructions"><b>Instructions:</b> Type the paragraphs as fast as you can to power your car past the finish line!</div>
+        <div id = "typeracerbox">
+        </div>
+        <div id="typeracer-info">
+          <span><span id="leftside-info">Record: <span class="wins"></span> Wins - <span class="losses"></span> Losses</span></span>        
+        </div>
+        <div>
+          <textarea disabled class="form-control" id = "typeracer-display"></textarea>
+          <div class="form-control" id = "typeracer-match"><span id = "correct"></span><span id = "incorrect"></span></div>
+          <textarea id = "typeracer-input" class="form-control" onkeypress="if(!backspaceKeyCode(event)) { totalentries ++;}"></textarea>
+        </div>
+      </div>
+      <% include ../../partials/footer %>
+    </div>
+  </body>
+  <script>
+    var username = '<%= user.username %>';
+    var car_color = '<%= user.typeracer.car_color %>';
+    setWLs();
+    startTypeRacer();
+  </script>
+</html>
+
+

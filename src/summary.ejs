@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TypePhil</title>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <% include ./partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_main_menu()"><span class="fa fa-arrow-left"></span></button>
+      <div id="scores-title">High Scores</div>
+      <div id="summary-box">
+        <div class="game-name">Challenge Scores</div>
+        <div class="game-score">
+          <div>Easy: <span class="mode-score"><%= user.challenge.score.easy.streak %></span> phrase streak</div>
+          <div>Medium: <span class="mode-score"><%= user.challenge.score.medium.streak %></span> phrase streak</div>
+          <div>Hard: <span class="mode-score"><%= user.challenge.score.hard.streak %></span> phrase streak</div>
+        </div>
+        <div class="game-name">Spacerace Scores </div>
+        <div class="game-score">
+          <div>Easy: <span class="mode-score"><%= user.spacerace.score.easy.points %></span> points</div>
+          <div>Medium: <span class="mode-score"><%= user.spacerace.score.medium.points %></span> points</div>
+          <div>Hard: <span class="mode-score"><%= user.spacerace.score.hard.points %></span> points</div>
+        </div>
+        <div class="game-name">Typeracer Scores </div>
+        <div class="game-score">
+          <div>Easy: <span class="mode-score"><%= user.typeracer.score.easy.wpm %></span> wpm top speed, <span class="wins mode-score"><%= user.typeracer.score.easy.wins %></span> W - <span class="losses mode-score"><%= user.typeracer.score.easy.losses %></span> L</div>
+          <div>Medium: <span class="mode-score"><%= user.typeracer.score.medium.wpm %></span> wpm top speed, <span class="wins mode-score"><%= user.typeracer.score.medium.wins %></span> W - <span class="losses mode-score"><%= user.typeracer.score.medium.losses %></span> L</div>
+          <div>Hard: <span class="mode-score"><%= user.typeracer.score.hard.wpm %></span> wpm top speed, <span class="wins mode-score"><%= user.typeracer.score.hard.wins %></span> W - <span class="losses mode-score"><%= user.typeracer.score.hard.losses %></span> L</div>
+        </div>
+      </div>
+      <% include ./partials/footer %>
+    </div>
+  </body>
+</html>

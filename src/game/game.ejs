@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <% include ../partials/navbar %>
+    <div class = "main-container withnav">
+      <button class="back" onclick="route_main_menu()"><span class="fa fa-arrow-left"></span></button>
+      <div class = "signif">
+        <div id = "game-title">Games</div>
+        <table class = "menu-box">
+          <tr>
+            <td>
+              <button class = "btn btn-warning" onclick="route_config_spacerace()"><span class = "fa fa-rocket"></span> <span class = "desc">SpaceRace</span></button>
+            </td>
+            <td>
+              <span class="desc">Protect Planet Earth from alien word asteroids!</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class = "btn btn-warning" onclick="route_config_typeracer()"><span class = "fa fa-flag-checkered"></span> <span class = "desc">TypeRacer</span></button>
+            </td>
+            <td>
+              <span class="desc">Enter the racetrack and hone your typing speed!</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class = "btn btn-warning" onclick="route_config_challenge()"><span class = "fa fa-hand-rock-o"></span> <span class = "desc">Challenge</button>
+            </td>
+            <td>
+              <span class="desc">Beat the timer and extend your streak!</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <% include ../partials/footer %>
+    </div>
+  </body>
+</html>
